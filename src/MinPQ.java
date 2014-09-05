@@ -35,7 +35,8 @@ public class MinPQ<T extends Comparable<T>> {
 
     // helper function to double the size of the heap array
     private void resize(int capacity) {
-        T[] temp = (T[]) new Comparable[capacity];
+        @SuppressWarnings("unchecked")
+		T[] temp = (T[]) new Comparable[capacity];
         for (int i = 0; i <= N; i++) temp[i] = pq[i];
         pq = temp;
     }
