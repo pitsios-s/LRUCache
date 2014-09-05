@@ -20,7 +20,8 @@ public class MinPQ<T extends Comparable<T>> {
     private int N;         // number of elements on priority queue
 
     // set initial capacity of heap to hold given number of elements
-    public MinPQ(int maxN) {
+    @SuppressWarnings("unchecked")
+	public MinPQ(int maxN) {
         pq = (T[]) new Comparable[maxN + 1];
         N = 0;
     }
